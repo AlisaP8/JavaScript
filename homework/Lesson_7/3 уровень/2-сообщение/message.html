@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button>Показать сообщение</button>
+    <div class="message">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aliquam enim voluptates quibusdam
+        perferendis sint ipsa, nulla quas doloribus nobis libero voluptatem unde inventore. Ut quas corporis fugit error
+        explicabo? Ipsa quos qui similique sequi officia quod ab reiciendis alias!
+    </div>
+
+    <!-- 
+    Задание. Вам нужно чтобы при клике на кнопку появлялось сообщение .message
+    снизу экрана, в общем как сообщения вконтакте.
+    -->
+
+    <script>
+        'use strict';
+
+        let message = document.querySelector('.message');
+        let button = document.querySelector('button');
+        let audioElement = new Audio('notification.mp3');
+        button.addEventListener('click', function () {
+            let newMessage = message.clientHeight;
+            message.style.transform = `translateY(-${20 + newMessage}px)`;
+            audioElement.play();
+        });
+
+
+    </script>
+</body>
+
+</html>

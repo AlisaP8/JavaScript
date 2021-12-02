@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+
+    <!-- Задание. Найдите все дивы и добавьте им padding: 10px. -->
+
+    <script>
+        'use strict';
+
+        let divs = document.getElementsByTagName('div');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.padding = '10px';
+        };
+
+    </script>
+</body>
+
+</html>

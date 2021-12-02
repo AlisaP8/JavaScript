@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div class="productName">Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+
+    <!-- Задание.
+    1. Сделайте всем элементам .product какой-нибудь фон
+    2. Сделайте элементам .productName размер шрифта 24px
+    -->
+
+    <script>
+        'use strict';
+
+        let prod = document.querySelectorAll('.product');
+        prod.forEach(function (product) {
+            product.style.background = 'grey';
+        });
+
+        let prodName = document.querySelectorAll('.productName');
+        prodName.forEach(function (name) {
+            name.style.fontSize = '24px';
+        });
+
+    </script>
+</body>
+
+</html>

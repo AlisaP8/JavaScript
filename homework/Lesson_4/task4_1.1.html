@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        /* Сделайте в стиле es5, а затем в стиле es6, конструктор Product, который принимает параметры name
+        * и price, сохраните их как свойства объекта. Также объекты типа Product должны иметь метод
+        * make25PercentDiscount, который будет уменьшать цену в объекте на 25%. Имейте в виду, что метод
+        * make25PercentDiscount не должен быть внутри функции-конструктора, и также не нужно создавать отдельный
+        * объект-прототип
+        */
+
+        // es5
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product.prototype.make25PercentDiscount = function (discount) {
+            this.price = this.price - (this.price / 100 * discount);
+        }
+
+        const product1 = new Product('phone', 3000);
+        console.log(product1);
+        product1.make25PercentDiscount(25);
+
+        // es6
+
+        class newProduct {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount(discount) {
+                this.price = this.price - (this.price / 100 * discount);
+            }
+        };
+
+        const product2 = new Product('book', 200);
+        console.log(product2);
+        product2.make25PercentDiscount(25);
+
+    </script>
+</body>
+
+</html>

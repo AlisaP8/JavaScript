@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="product">
+        <div>Товар 1</div>
+        <img src="images/1.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div>Товар 1</div>
+        <img src="images/2.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <div>Товар 1</div>
+        <img src="images/3.jpg" alt="">
+        <button>В корзину</button>
+    </div>
+
+    <!-- Задание. Нужно чтобы при клике по кнопке, блок .product, в котором она
+    находится становился цвета (имеется в виду background) lightgreen, а текст на 
+	кнопке стал "Добавлено"
+    -->
+
+    <script>
+        'use strict';
+
+        let btn = document.querySelectorAll('button');
+        btn.forEach(function (button) {
+            button.addEventListener('click', buttonClickHandler)
+        })
+
+        function buttonClickHandler(event) {
+            event.target.parentNode.style.background = 'lightgreen';
+            event.target.innerText = "Добавлено";
+        }
+
+    </script>
+</body>
+
+</html>
